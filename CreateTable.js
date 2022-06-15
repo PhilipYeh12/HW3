@@ -92,7 +92,7 @@ function create_table(matrix){
   var column = V_start;
 
   for (var i = 0; i <= columnCount; i++) {
-    // Set the left most column first.
+
     contents += "<tr><td>" + column + "</td>";
 
     for (var j = 0; j <= rowCount; j++) {
