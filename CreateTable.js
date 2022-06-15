@@ -75,4 +75,32 @@ function create_table(matrix){
     H_start = H_end;
     H_end = tmp;
   }
+
+  var rowCount = Math.abs(H_end - H_start);
+  var columnCount = Math.abs(V_end - V_start);
+
+  var contents = "";
+
+  contents += "<table>";
+  contents += "<tr><td></td>";
+
+  for (var a = H_start; a <= H_end; a++) {
+    contents += "<td>" + a + "</td>";
+  }
+
+  contents += "</tr>";
+  var column = V_start;
+
+  for (var i = 0; i <= columnCount; i++) {
+    // Set the left most column first.
+    contents += "<tr><td>" + column + "</td>";
+
+    for (var j = 0; j <= rowCount; j++) {
+      contents += "<td>" + matrix["rowCount" + i][j] + "</td>";
+    }
+    column++;
+    contents += "</tr>";
+  }
+  contents += "</table>";
+  $("#MultiTable").html(contents);
 }
