@@ -1,10 +1,11 @@
+<!-- Philip yeh, this is the HTML document for the dynamic table where I created a form and linked the JS and css Files -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap 101 Template</title>
+        <title>Philip's dynamic table</title>
 
 
         <!-- Latest compiled and minified CSS -->
@@ -16,30 +17,37 @@
         <link rel="stylesheet" href="main.css">
     </head>
 
-    <h1> h1 </h1>
+    <div class="jumbotron"><!-- used previous class excerise to create a header -->
+            <div class ="container">
+                <h1>Welcome</h1>
+                <p1 id = "error">This is a dynamic calculator, please enter a number between -50 and 50 </p1>
+            </div>
+        </div>
     <body>
-      <div class ="container">
+      <div class ="container"><!-- Following the steps of pdf, create a form that asks for 4 values  -->
         <div class="row">
-          <div class= "col-md-12">
-            <form onsubmit="return false">
+          <div class= "col-md-12"><!-- I utilized bootstrap and some of the previous class works to create this form -->
+            <formon submit="return false"><!--When i tried to debug, the form would reset of bad values I learned from here http://www.java2s.com/Tutorials/Javascript/Javascript_Form_How_to/Submit_Button/Return_false_in_form_Submit_button_click_event_to_stop_form_submission.htm, you can stop that -->
               <label>Minimum Row Value: </label>
               <input type="number" name="HorizonStartRow" id="HorizonStartRow" value="1">
               <br>
               <label>Maximum Row Value: </label>
-              <input type="number" name="HorizonEndRow" id="HorizonEndRow" value="10">
+              <input type="number" name="HorizonEndRow" id="HorizonEndRow" value="6">
               <br>
               <label>Minimum Column Value: </label>
               <input type="number" name="VerticalStartRow" id="VerticalStartRow" value="1">
               <br>
               <label>Maximum Column Value: </label>
-              <input type="number" name="VerticleEndRow" id="VerticleEndRow" value="10">
+              <input type="number" name="VerticleEndRow" id="VerticleEndRow" value="6">
               <br>
-              <input type="submit" value="Submit " onclick="return MakeTable();">
+              <input type="submit" value="Submit " onclick="return MakeTable();"><!-- on click submits cals make table function -->
             </form>
+
           </div>
         </div>
-        <div id="MultiTable">
-
+        <div class="container2"
+          <div id="MultiTable"><!-- this is where the table will be placed-->
+        </div>
         </div>
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
