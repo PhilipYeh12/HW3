@@ -20,7 +20,7 @@ h1{
 }
 
 .container2{ /* make it so, that there is a scrollable container for the container*/
-  height: 350px;
+  height: 425px;
   overflow: auto;
 
 }
