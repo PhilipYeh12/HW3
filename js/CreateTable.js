@@ -7,7 +7,7 @@
 
 //Philip Yeh
 //GUI Assignment: create dynamic table
-//
+
 function MakeTable(){
   //Collect values by getting elementby ID and use Number Function to make sure its saved a number variable
   var H_start = Number(document.getElementById('HorizonStartRow').value)
